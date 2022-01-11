@@ -229,7 +229,17 @@
 <script src="https://cdn.bootcss.com/d3-transform/1.0.4/d3-transform.js"></script>
 <script src="js/bubblefloat.js"></script>
 
-<audio src="music/1.mp3" autoplay="true" loop="true"></audio>
+<audio sytle="display:none; height:0" id="bg-music" preload="auto" src="music/1.mp3" loop="loop"></audio>
+	document.addEventListener('DOMContentLoaded', function(){
+	function audioAutoPlay(){
+	var audio = document.getElementById('bg-music');
+	audio.play();
+	document.addEventListener("WeixinJSBridgeReady", function(){
+	audio.play();
+	}, false);
+	}
+	audioAutoPlay();
+	});
 </body>
 
 </html>

@@ -9,6 +9,6 @@ $('#login-button').click(function (event) {
 			setTimeout(function(){location.href="BirthdayCake.html";},2000);
 		}
 	else{
-		alert("错了错了！你再想想");
+		alert("提示：用户名两个字，密码四位数");
 	}
 });
